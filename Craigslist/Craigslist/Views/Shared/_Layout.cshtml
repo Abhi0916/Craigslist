@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title - ITU's Craigslist</title>
     <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
 	<link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css"/>
 
@@ -11,7 +11,33 @@
 	<script src="~/Scripts/modernizr-2.6.2.js"></script>
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">ITU's Craigslist</a>
+                </div>
+                <div>
+                    <ul class="nav navbar-nav">
+                        <li><a href="#">Create Posting</a></li>
+                        @* can re edit to improve nav bar by increasing items
+                            <li><a href="#">Appliance</a></li>
+                        <li><a href="#">House Rent</a></li>
+                        <li><a href="#">Car Pool</a></li>*@
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                         @*<button class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+                            Login</button>*@
+                         
+                        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>@*end of navbar edit*@
+
+    @* //edit before by abhimanyu//
+        <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -27,13 +53,14 @@
                 </ul>
             </div>
         </div>
-    </div>
-	@Html.Action("Index", "Navigation")
+    </div>*@
+
+	@*@Html.Action("Index", "Navigation")*@
     <div class="container body-content">
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <p>&copy; @DateTime.Now.Year - Team ITU</p>
         </footer>
     </div>
 
